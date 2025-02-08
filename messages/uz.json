@@ -1,0 +1,40 @@
+{
+  "Navbar": {
+    "home": "Bosh sahifa",
+    "about": "Biz haqimizda",
+    "management": "Hamkorlik",
+    "radio": "Poytaxt radio",
+    "contact": "Kontaktlar"
+  },
+  "HomeAbout": {
+    "title": "Sevimli.fm - bu musiqaga 🎵 va ilhomga 🌌 bo'lgan muhabbat bilan yaratilgan musiqiy hamrohingiz ❤️.",
+    "description": "Bizning radiostansiyamiz yurakni larzaga soluvchi ovozlar orqali odamlarni birlashtirish istagidan tug'ilgan. Biz musiqaning har kim tushunadigan til ekanligiga ishonamiz va bizning maqsadimiz ushbu tilni dunyo bilan baham ko'rishdir."
+  },
+  "BrandPromotion": {
+    "title": "Sevimli radio to‘lqinlarida brendingizni samarali targ‘ib qilish.",
+    "description": " - minglab tinglovchilarga sizning mahsulot yoki xizmatingiz haqida bilib olish imkoniyatini taqdim etadi. Biz e’tiborni jalb qilishni kafolatlaydigan noyob reklama formatlarini taklif qilamiz. Audio roliklar, efirga integratsiyalar va shou dasturlaridagi eslatmalar sizning brendingizni taniqli va mashhur qiladi.",
+    "download": "Yuklash"
+  },
+  "Partners": {
+    "title": "Bizning Hamkorlarimiz",
+    "description": "Biz o'z sohasining yetakchilari bilan hamkorlik qilishdan faxrlanamiz."
+  },
+  "Map": {
+    "title": "O‘zbekiston xaritasida"
+  },
+  "Contact": {
+    "title": "Bizning musiqiy olamimizning bir qismi bo'lishni xohlaysizmi?",
+    "description": "Biz yangi g‘oyalar, hamkorlik va qiziqarli loyihalar uchun ochiqmiz!",
+    "email_info": "Bizga yozing:",
+    "address": "📍 Manzil: Toshkent, Amir Temur shoh ko'chasi, 53.",
+    "phone": "📞 Telefon: +998 (xx) xxx-xx-xx",
+    "socials": "🌐 Ijtimoiy tarmoqlar: Instagram, Telegram, YouTube",
+    "contact_form_title": "Biz bilan bog‘laning",
+    "contact_form_description": "Istalgan vaqtda biz bilan bog'lanishingiz mumkin",
+    "name": "Ism",
+    "surname": "Familiya",
+    "phone_number": "Telefon raqami",
+    "message_placeholder": "Biz qanday yordam bera olamiz?",
+    "send_button": "Yuborish"
+  }
+}

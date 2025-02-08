@@ -1,0 +1,40 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "about": "About Us",
+    "management": "Management",
+    "radio": "Poytaxt Radio",
+    "contact": "Contact"
+  },
+  "HomeAbout": {
+    "title": "Sevimli.fm is your musical companion, created with love ❤️ for music 🎵 and inspiration. 🌌",
+    "description": "Our radio station was born out of a desire to unite people through sounds that touch the heart. We believe that music is a language everyone understands, and our mission is to share this language with the world."
+  },
+  "BrandPromotion": {
+    "title": "Effective promotion of your brand on the waves of your favorite radio station.",
+    "description": " has thousands of listeners ready to learn about your product or service. We offer unique advertising formats that are guaranteed to attract attention. Audio ads, live integrations, and mentions in shows will make your brand recognizable and popular.",
+    "download": "Download"
+  },
+  "Partners": {
+    "title": "Наши партнеры",
+    "description": "Мы гордимся сотрудничеством с лидерами своих отраслей."
+  },
+  "Map": {
+    "title": "на карте Узбекистана"
+  },
+  "Contact": {
+    "title": "Хотите стать частью нашей музыкальной вселенной?",
+    "description": "Мы открыты для новых идей, партнерств и интересных проектов!",
+    "email_info": "Напишите нам на",
+    "address": "📍 Адрес: г. Ташкент, проспект Амира Темура, 53.",
+    "phone": "📞 Телефон: +998 (xx) xxx-xx-xx",
+    "socials": "🌐 Соцсети: Instagram, Telegram, YouTube",
+    "contact_form_title": "Свяжитесь с нами",
+    "contact_form_description": "Вы можете связаться с нами в любое время",
+    "name": "Имя",
+    "surname": "Фамилия",
+    "phone_number": "Номер телефона",
+    "message_placeholder": "Как мы можем помочь?",
+    "send_button": "Отправить"
+  }
+}
