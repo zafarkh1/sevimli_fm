@@ -5,7 +5,7 @@ const HomeAbout = () => {
   const t = useTranslations("HomeAbout");
 
   return (
-    <section className="">
+    <section>
       <h1 className="lg:text-[56px] text-2xl font-semibold lg:leading-[65px] leading-7">
         {t("title")}
       </h1>

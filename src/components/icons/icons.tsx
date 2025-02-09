@@ -65,3 +65,39 @@ export const IconMusicPause = (props: IconProps): JSX.Element => (
     <rect x="70" y="15" width="30" height="90" rx="10" fill="white" />
   </svg>
 );
+
+export const IconArrowTop = (props: IconProps): JSX.Element => (
+  <svg
+    width="14"
+    height="16"
+    viewBox="0 0 14 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M7 15V1M7 1L13 7.3M7 1L1 7.3"
+      stroke="#F9FAFB"
+      strokeWidth="1.4"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+export const IconClose = (props: IconProps): JSX.Element => (
+  <svg
+    viewBox="0 0 24 25"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M18 6.5L6 18.5M6 6.5L18 18.5"
+      stroke="white"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);

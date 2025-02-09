@@ -23,18 +23,43 @@
     "title": "на карте Узбекистана"
   },
   "Contact": {
-    "title": "Хотите стать частью нашей музыкальной вселенной?",
-    "description": "Мы открыты для новых идей, партнерств и интересных проектов!",
-    "email_info": "Напишите нам на",
-    "address": "📍 Адрес: г. Ташкент, проспект Амира Темура, 53.",
-    "phone": "📞 Телефон: +998 (xx) xxx-xx-xx",
-    "socials": "🌐 Соцсети: Instagram, Telegram, YouTube",
-    "contact_form_title": "Свяжитесь с нами",
-    "contact_form_description": "Вы можете связаться с нами в любое время",
-    "name": "Имя",
-    "surname": "Фамилия",
-    "phone_number": "Номер телефона",
-    "message_placeholder": "Как мы можем помочь?",
-    "send_button": "Отправить"
+    "title": "Do you want to be part of our musical universe?",
+    "description": "We are open to new ideas, partnerships, and exciting projects!",
+    "email_info": "Write to us at",
+    "address": "📍 Address: Tashkent, Amir Temur Avenue, 53.",
+    "phone": "📞 Phone: +998 (xx) xxx-xx-xx",
+    "socials": "🌐 Socials: Instagram, Telegram, YouTube",
+    "contact_form_title": "Contact Us",
+    "contact_form_description": "You can reach out to us anytime",
+    "name": "First Name",
+    "surname": "Last Name",
+    "phone_number": "Phone Number",
+    "message_placeholder": "How can we help?",
+    "send_button": "Send"
+  },
+  "Footer": {
+    "home": "Home",
+    "about": "About Us",
+    "projects": "Projects",
+    "sevimli_fm": "SEVIMLI FM",
+    "sevimli_tv": "SEVIMLI TV",
+    "poytaxt_radio": "Poytaxt Radio",
+    "frequency_1": "103.5",
+    "frequency_2": "107.2",
+    "contacts": "Contacts",
+    "contact": "Contact",
+    "phone": "+998 (99) 123-31-90",
+    "email": "info@sevimli.fm",
+    "address": "Tashkent, Amir Temur Avenue, 53.",
+    "write": "Write",
+    "terms": "User Agreement",
+    "privacy_policy": "Privacy Policy",
+    "copyright": "© 2025 — Sevimli.fm"
+  },
+  "About": {
+    "title": "Sevimli.fm is your musical companion, created with love ❤️ for music 🎵 and inspiration. 🌌",
+    "description1": "Our radio station was born out of a desire to unite people through sounds that touch the heart. We believe that music is a language everyone understands, and our mission is to share this language with the world.",
+    "description2": "We are a team of professionals and enthusiasts who do everything to make each Sevimli.fm broadcast bring joy. From hosts to sound engineers, each of us puts our soul into our work.",
+    "teamTitle": "Sevimli.fm Team"
   }
 }

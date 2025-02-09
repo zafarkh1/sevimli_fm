@@ -4,7 +4,7 @@ const Contact = () => {
   const t = useTranslations("Contact");
 
   return (
-    <section className="flex lg:flex-row flex-col lg:gap-10 gap-6">
+    <section className="flex lg:flex-row flex-col lg:gap-10 gap-6 lg:mb-[224px] mb-[180px]">
       <div className="lg:w-3/5">
         <h3 className="lg:text-3xl text-2xl lg:leading-[45px] leading-8 font-semibold mb-10">
           {t("title")}

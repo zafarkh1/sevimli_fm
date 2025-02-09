@@ -1,7 +1,13 @@
-import React from "react";
+import Gallery from "./components/Gallery";
+import Team from "./components/Team";
 
 const page = () => {
-  return <div>page</div>;
+  return (
+    <div className="myContainer">
+      <Gallery />
+      <Team />
+    </div>
+  );
 };
 
 export default page;

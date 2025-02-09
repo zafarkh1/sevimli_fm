@@ -1,0 +1,52 @@
+{
+  "TeamMembers": [
+    {
+      "img": "/images/team/team_1.png",
+      "name": "Amélie Laurent",
+      "job": "CEO",
+      "description": "Leads the development of the radio station, defines the strategy, and sets the direction for growth."
+    },
+    {
+      "img": "/images/team/team_2.png",
+      "name": "Ivan Petrov",
+      "job": "Editor-in-Chief",
+      "description": "Responsible for broadcast content, manages editorial policy, and ensures content quality."
+    },
+    {
+      "img": "/images/team/team_3.png",
+      "name": "Sophie Dubois",
+      "job": "Music Producer",
+      "description": "Selects music, curates playlists, and oversees the musical style of the radio station."
+    },
+    {
+      "img": "/images/team/team_4.png",
+      "name": "Alexey Smirnov",
+      "job": "Morning Show Host",
+      "description": "Creates an energetic morning atmosphere, engages with listeners, and spreads positivity."
+    },
+    {
+      "img": "/images/team/team_5.png",
+      "name": "Elena Ivanova",
+      "job": "PR Manager",
+      "description": "Responsible for the station's image, organizes PR campaigns, and maintains partnerships."
+    },
+    {
+      "img": "/images/team/team_6.png",
+      "name": "Lucas Moreau",
+      "job": "Technical Director",
+      "description": "Ensures the seamless operation of equipment and manages the technical aspects of broadcasting."
+    },
+    {
+      "img": "/images/team/team_7.png",
+      "name": "Natalia Sokolova",
+      "job": "Journalist",
+      "description": "Prepares news, conducts interviews, and tracks current events."
+    },
+    {
+      "img": "/images/team/team_8.png",
+      "name": "Maxime Bernard",
+      "job": "SMM Manager",
+      "description": "Manages the station’s social media, interacts with the audience, and promotes the brand online."
+    }
+  ]
+}

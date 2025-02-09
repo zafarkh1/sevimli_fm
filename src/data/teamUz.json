@@ -1,0 +1,52 @@
+{
+  "TeamMembers": [
+    {
+      "img": "/images/team/team_1.png",
+      "name": "Amélie Laurent",
+      "job": "Bosh direktor",
+      "description": "Radiostansiyani rivojlantirishga rahbarlik qiladi, strategiyani belgilaydi va taraqqiyot yo‘nalishini ko‘rsatadi."
+    },
+    {
+      "img": "/images/team/team_2.png",
+      "name": "Ivan Petrov",
+      "job": "Bosh muharrir",
+      "description": "Efir mazmuni uchun javobgar, tahririyat siyosatini boshqaradi va kontent sifatini nazorat qiladi."
+    },
+    {
+      "img": "/images/team/team_3.png",
+      "name": "Sophie Dubois",
+      "job": "Musiqa produseri",
+      "description": "Musiqa tanlaydi, pleylistlarni shakllantiradi va radiostansiyaning musiqiy uslubini belgilaydi."
+    },
+    {
+      "img": "/images/team/team_4.png",
+      "name": "Alexey Smirnov",
+      "job": "Tong shousi boshlovchisi",
+      "description": "Ertalabki ko‘tarinki muhitni yaratadi, tinglovchilar bilan muloqot qiladi va ijobiy energiya tarqatadi."
+    },
+    {
+      "img": "/images/team/team_5.png",
+      "name": "Elena Ivanova",
+      "job": "PR-menejer",
+      "description": "Radiostansiyaning imidji uchun javobgar, PR-kampaniyalarni tashkil qiladi va hamkorlar bilan aloqalarni qo‘llab-quvvatlaydi."
+    },
+    {
+      "img": "/images/team/team_6.png",
+      "name": "Lucas Moreau",
+      "job": "Texnik direktor",
+      "description": "Uskunaning uzluksiz ishlashini ta’minlaydi va efirning texnik tomonini boshqaradi."
+    },
+    {
+      "img": "/images/team/team_7.png",
+      "name": "Natalia Sokolova",
+      "job": "Jurnalist",
+      "description": "Yangiliklar tayyorlaydi, intervyular oladi va dolzarb voqealarni kuzatib boradi."
+    },
+    {
+      "img": "/images/team/team_8.png",
+      "name": "Maxime Bernard",
+      "job": "SMM-menejer",
+      "description": "Radiostansiyaning ijtimoiy tarmoqlarini yuritadi, auditoriya bilan muloqot qiladi va brendni internetda targ‘ib qiladi."
+    }
+  ]
+}

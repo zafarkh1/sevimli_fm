@@ -36,5 +36,30 @@
     "phone_number": "Telefon raqami",
     "message_placeholder": "Biz qanday yordam bera olamiz?",
     "send_button": "Yuborish"
+  },
+  "Footer": {
+    "home": "Bosh sahifa",
+    "about": "Biz haqimizda",
+    "projects": "Loyihalar",
+    "sevimli_fm": "SEVIMLI FM",
+    "sevimli_tv": "SEVIMLI TV",
+    "poytaxt_radio": "Poytaxt radio",
+    "frequency_1": "103.5",
+    "frequency_2": "107.2",
+    "contacts": "Kontaktlar",
+    "contact": "Aloqa",
+    "phone": "+998 (99) 123-31-90",
+    "email": "info@sevimli.fm",
+    "address": "Toshkent, Amir Temur shoh ko‘chasi, 53.",
+    "write": "Yozish",
+    "terms": "Foydalanuvchi shartnomasi",
+    "privacy_policy": "Maxfiylik siyosati",
+    "copyright": "© 2025 — Sevimli.fm"
+  },
+  "About": {
+    "title": "Sevimli.fm — bu sizning musiqiy hamrohingiz, musiqa 🎵 va ilhomga ❤️ bilan yaratilgan. 🌌",
+    "description1": "Bizning radiostansiyamiz yurakni larzaga soladigan tovushlar orqali odamlarni birlashtirish istagidan tug‘ilgan. Musiqa – barchaga tushunarli til deb hisoblaymiz va bizning vazifamiz – shu tilni butun dunyo bilan bo‘lishish.",
+    "description2": "Biz – har bir Sevimli.fm efirini quvonchga aylantirish uchun bor kuchini sarflaydigan professionallar va ishqibozlardan iborat jamoamiz. Boshlovchilardan tortib, ovoz rejissyorlarigacha, har birimiz ishimizga jonimizni beramiz.",
+    "teamTitle": "Sevimli.fm Jamoasi"
   }
 }

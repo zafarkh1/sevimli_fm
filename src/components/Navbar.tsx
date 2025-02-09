@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { LanguageSwitcher } from "./LanguageSwitcher";
-import { IconMenuBurger } from "./icons/icons";
+import { IconClose, IconMenuBurger } from "./icons/icons";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -18,11 +18,22 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 0);
+      const isScrolled = window.scrollY > 0;
+      setScrolled(isScrolled);
     };
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+
+    if (isOpen) {
+      document.body.style.overflow = "hidden"; // Disable scrolling
+    } else {
+      document.body.style.overflow = ""; // Enable scrolling again
+    }
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.body.style.overflow = ""; // Cleanup
+    };
+  }, [isOpen]);
 
   return (
     <header
@@ -35,7 +46,7 @@ const Navbar = () => {
         <div className="hidden lg:flex items-center xl:gap-14 lg:gap-8">
           <Link href={`/${currentLang}`}>{t("home")}</Link>
           <Link href={`/${currentLang}/about`}>{t("about")}</Link>
-          <Link href={`/${currentLang}/management`}>{t("management")}</Link>
+          <Link href={`/${currentLang}/cooperation`}>{t("management")}</Link>
         </div>
 
         {/* Logo */}
@@ -61,7 +72,7 @@ const Navbar = () => {
 
         {/* Desktop Right Side */}
         <div className="hidden lg:flex items-center xl:gap-14 lg:gap-8">
-          <Link href={`/${currentLang}/radio`}>{t("radio")}</Link>
+          <Link href={`/${currentLang}`}>{t("radio")}</Link>
           <Link href={`/${currentLang}/contact`}>{t("contact")}</Link>
           <LanguageSwitcher />
         </div>
@@ -82,8 +93,8 @@ const Navbar = () => {
         {/* Mobile Menu */}
         <div
           className={`fixed top-0 left-0 h-full w-[75%] max-w-xs bg-[#0A0A0A] px-8 py-6 transform ${
-            isOpen ? "translate-x-0" : "-translate-x-full"
-          } transition-transform duration-300 ease-in-out lg:hidden z-50`}
+            isOpen ? "translate-x-0 z-50" : "-translate-x-full"
+          } transition-transform duration-300 ease-in-out lg:hidden`}
         >
           <Image
             src="/images/logo/logo_mobile.svg"
@@ -95,10 +106,13 @@ const Navbar = () => {
           <div className="flex flex-col space-y-6 mt-10">
             <Link href={`/${currentLang}`}>{t("home")}</Link>
             <Link href={`/${currentLang}/about`}>{t("about")}</Link>
-            <Link href={`/${currentLang}/management`}>{t("management")}</Link>
+            <Link href={`/${currentLang}/cooperation`}>{t("management")}</Link>
             <Link href={`/${currentLang}/radio`}>{t("radio")}</Link>
             <Link href={`/${currentLang}/contact`}>{t("contact")}</Link>
           </div>
+          <button onClick={() => setIsOpen(false)}>
+            <IconClose className="size-8 absolute top-10 right-4 cursor-pointer" />
+          </button>
         </div>
 
         {/* Overlay to close menu */}
