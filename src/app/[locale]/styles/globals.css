@@ -54,11 +54,11 @@ html {
   background: #f1f1f1;
 }
 
-/* audio {
+audio {
   display: none;
 }
 
-.vz-wrapper {
+/* .vz-wrapper {
   position: relative;
   height: 100vh;
   width: 100%;

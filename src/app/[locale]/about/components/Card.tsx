@@ -1,6 +1,4 @@
 const Card = ({ ...props }) => {
-  console.log(props);
-
   return (
     <div>
       <img src={props.img} alt={props.name} className="lg:mb-6 mb-2" />

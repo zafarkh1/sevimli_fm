@@ -1,24 +1,48 @@
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 const Contact = () => {
   const t = useTranslations("Contact");
 
   return (
-    <section className="flex lg:flex-row flex-col lg:gap-10 gap-6 lg:mb-[224px] mb-[180px]">
+    <section className="flex lg:flex-row flex-col lg:gap-10 gap-6 lg:mb-[224px] mb-[87px]">
       <div className="lg:w-3/5">
         <h3 className="lg:text-3xl text-2xl lg:leading-[45px] leading-8 font-semibold mb-10">
           {t("title")}
         </h3>
         <p className="text-xl font-medium mb-8 lg:w-2/3">
-          {t("description")}{" "}
-          <span className="text-primary">
-            {t("email_info")} info@sevimli.fm
-          </span>
+          {t("description")} {t("email_info")}{" "}
+          <span className="text-primary">info@sevimli.fm</span>
         </p>
         <ul className="space-y-4 lg:w-1/2">
           <li>{t("address")}</li>
           <li>{t("phone")}</li>
-          <li>{t("socials")}</li>
+          <li>
+            {t("socials")}
+            <Link
+              href="https://www.instagram.com"
+              target="_blank"
+              className="underline hover:text-primary transition duration-300"
+            >
+              Instagram
+            </Link>
+            ,{" "}
+            <Link
+              href="https://www.telegram.org"
+              target="_blank"
+              className="underline hover:text-primary transition duration-300"
+            >
+              Telegram
+            </Link>
+            ,{" "}
+            <Link
+              href="https://www.youtube.com"
+              target="_blank"
+              className="underline hover:text-primary transition duration-300"
+            >
+              You Tube
+            </Link>
+          </li>
         </ul>
       </div>
 

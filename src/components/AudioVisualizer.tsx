@@ -1,12 +1,26 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import {
+  IconMusicPause,
+  IconMusicPlay,
+  SevimliMusic,
+} from "@/components/icons/icons";
 
-const AudioVisualizer: React.FC = () => {
+const AudioVisualizer: React.FC<{
+  isPlaying: boolean;
+  togglePlay: () => void;
+  volume: number;
+}> = ({ isPlaying, togglePlay, volume }) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [audioCtx, setAudioCtx] = useState<AudioContext | null>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = volume; // Apply volume change
+    }
+  }, [volume]);
 
   useEffect(() => {
     if (!canvasRef.current || !audioRef.current) return;
@@ -18,16 +32,6 @@ const AudioVisualizer: React.FC = () => {
     let analyser: AnalyserNode;
     let source: MediaElementAudioSourceNode;
     let animationFrameId: number;
-
-    const toggleAudio = () => {
-      if (audio) {
-        if (audio.paused) {
-          audio.play();
-        } else {
-          audio.pause();
-        }
-      }
-    };
 
     const handleUserInteraction = () => {
       if (!newAudioCtx) {
@@ -44,7 +48,6 @@ const AudioVisualizer: React.FC = () => {
         newAudioCtx.resume();
       }
 
-      setIsPlaying(true);
       const bufferLength = analyser.frequencyBinCount;
       const dataArray = new Uint8Array(bufferLength);
 
@@ -57,28 +60,30 @@ const AudioVisualizer: React.FC = () => {
         ctx.fillStyle = "#000";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+        // if (!isPlaying) return; // 🔥 Don't draw anything if paused
+
         const centerX = canvas.width / 2;
         const centerY = canvas.height / 2;
         const radius = 90;
-
-        // 260-degree wave with 90° (top) open
-        const startAngle = (3 * Math.PI) / 2 + (50 * Math.PI) / 180; // Start at 120° (to keep 90° open at top)
-        const waveArc = (260 * Math.PI) / 180; // 260° in radians
+        const startAngle = (35 * Math.PI) / 180;
+        const waveArc = (260 * Math.PI) / 180;
         const endAngle = startAngle + waveArc;
 
-        // Draw reference arc
         ctx.beginPath();
         ctx.arc(centerX, centerY, radius, startAngle, endAngle);
-        ctx.strokeStyle = "#FFF";
-        ctx.lineWidth = 2;
+        ctx.strokeStyle = "#FF3400";
+        ctx.lineWidth = 4;
         ctx.stroke();
 
         const spacing = 3;
+        ctx.lineCap = "round";
 
         for (let i = 0; i < bufferLength; i += spacing) {
-          // Map bars across the 260-degree arc
           const angle = startAngle + (i / bufferLength) * waveArc;
-          const barHeight = dataArray[i] / 2;
+          let baseHeight = dataArray[i] / 2;
+          const barHeight = i % 2 === 0 ? baseHeight * 1 : baseHeight * 0.6;
+          const barWidth = i % 2 === 0 ? 6 : 4;
+
           const x = centerX + Math.cos(angle) * (radius + barHeight);
           const y = centerY + Math.sin(angle) * (radius + barHeight);
           const x2 = centerX + Math.cos(angle) * radius;
@@ -87,8 +92,13 @@ const AudioVisualizer: React.FC = () => {
           ctx.beginPath();
           ctx.moveTo(x2, y2);
           ctx.lineTo(x, y);
-          ctx.strokeStyle = `rgb(${barHeight + 100}, 50, 150)`;
-          ctx.lineWidth = 3;
+
+          const gradient = ctx.createLinearGradient(x2, y2, x, y);
+          gradient.addColorStop(0, "#FF3400");
+          gradient.addColorStop(1, "#FF6C47");
+
+          ctx.strokeStyle = gradient;
+          ctx.lineWidth = barWidth;
           ctx.stroke();
         }
       };
@@ -96,18 +106,10 @@ const AudioVisualizer: React.FC = () => {
       draw();
     };
 
-    // Play/Pause on click or touch
-    document.addEventListener("click", toggleAudio);
-    document.addEventListener("touchstart", toggleAudio);
-
     audio.addEventListener("play", handleUserInteraction);
-    audio.addEventListener("pause", () => setIsPlaying(false));
 
     return () => {
-      document.removeEventListener("click", toggleAudio);
-      document.removeEventListener("touchstart", toggleAudio);
       audio.removeEventListener("play", handleUserInteraction);
-      audio.removeEventListener("pause", () => setIsPlaying(false));
       if (newAudioCtx) {
         newAudioCtx.close();
       }
@@ -115,17 +117,46 @@ const AudioVisualizer: React.FC = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (!audioRef.current) return;
+    if (isPlaying) {
+      audioRef.current.play();
+    } else {
+      audioRef.current.pause();
+    }
+  }, [isPlaying]);
+
   return (
-    <div className="vz-wrapper">
-      <audio
-        ref={audioRef}
-        src="/audio/audio.mp3"
-        data-author="Beethoven"
-        data-title="Allegro"
-        controls
-      ></audio>
-      <div className="vz-wrapper -canvas">
-        <canvas ref={canvasRef} width={800} height={400}></canvas>
+    <div className="relative flex flex-col items-center">
+      {/* Audio element */}
+      <audio ref={audioRef} src="/audio/audio.mp3"></audio>
+
+      {/* Play/Pause Button */}
+      <button
+        className="absolute top-0 left-0 z-10 bg-black bg-opacity-50 p-2 rounded-full"
+        onClick={togglePlay}
+      >
+        {isPlaying ? (
+          <IconMusicPause className="lg:size-[120px] size-12 text-white" />
+        ) : (
+          <IconMusicPlay className="lg:size-[120px] size-12 text-white" />
+        )}
+      </button>
+
+      {/* Animated Logo */}
+      <div className="relative flex lg:ml-64 ml-32">
+        <div className="absolute -top-36 -left-40 -z-10">
+          <canvas
+            ref={canvasRef}
+            width={400}
+            height={400}
+            className="w-[400px] h-[400px]"
+          ></canvas>
+        </div>
+        <div className="absolute -top-28 -left-[90px]">
+          {!isPlaying && <SevimliMusic />}
+        </div>
+        <img src="/images/showcase.svg" alt="showcase text" className="ml-4" />
       </div>
     </div>
   );

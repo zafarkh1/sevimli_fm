@@ -3,9 +3,9 @@ import { useTranslations } from "next-intl";
 const Gallery = () => {
   const t = useTranslations("About");
   return (
-    <section className="lg:mt-36 lg:pt-32 py-14 lg:pb-24">
+    <section className="lg:mt-36 lg:pt-32 pt-28 pb-14 lg:pb-24">
       <h1 className="lg:text-[56px] text-2xl font-semibold lg:leading-[65px] leading-7 text-center lg:mb-40">
-        {t("title")}
+        <span className="text-primary">Sevimli.fm </span> {t("title")}
       </h1>
       <p className="lg:text-2xl text-base font-semibold lg:w-2/3 lg:my-8 mt-6 mb-9">
         {t("description1")}

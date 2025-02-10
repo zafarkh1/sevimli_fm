@@ -2,12 +2,12 @@
   "Navbar": {
     "home": "Bosh sahifa",
     "about": "Biz haqimizda",
-    "management": "Hamkorlik",
+    "management": "Boshqaruv",
     "radio": "Poytaxt radio",
     "contact": "Kontaktlar"
   },
   "HomeAbout": {
-    "title": "Sevimli.fm - bu musiqaga 🎵 va ilhomga 🌌 bo'lgan muhabbat bilan yaratilgan musiqiy hamrohingiz ❤️.",
+    "title": "- bu musiqaga 🎵 va ilhomga 🌌 bo'lgan muhabbat bilan yaratilgan musiqiy hamrohingiz ❤️.",
     "description": "Bizning radiostansiyamiz yurakni larzaga soluvchi ovozlar orqali odamlarni birlashtirish istagidan tug'ilgan. Biz musiqaning har kim tushunadigan til ekanligiga ishonamiz va bizning maqsadimiz ushbu tilni dunyo bilan baham ko'rishdir."
   },
   "BrandPromotion": {
@@ -28,7 +28,7 @@
     "email_info": "Bizga yozing:",
     "address": "📍 Manzil: Toshkent, Amir Temur shoh ko'chasi, 53.",
     "phone": "📞 Telefon: +998 (xx) xxx-xx-xx",
-    "socials": "🌐 Ijtimoiy tarmoqlar: Instagram, Telegram, YouTube",
+    "socials": "🌐 Ijtimoiy tarmoqlar:",
     "contact_form_title": "Biz bilan bog‘laning",
     "contact_form_description": "Istalgan vaqtda biz bilan bog'lanishingiz mumkin",
     "name": "Ism",
@@ -57,9 +57,12 @@
     "copyright": "© 2025 — Sevimli.fm"
   },
   "About": {
-    "title": "Sevimli.fm — bu sizning musiqiy hamrohingiz, musiqa 🎵 va ilhomga ❤️ bilan yaratilgan. 🌌",
+    "title": "— bu sizning musiqiy hamrohingiz, musiqa 🎵 va ilhomga ❤️ bilan yaratilgan. 🌌",
     "description1": "Bizning radiostansiyamiz yurakni larzaga soladigan tovushlar orqali odamlarni birlashtirish istagidan tug‘ilgan. Musiqa – barchaga tushunarli til deb hisoblaymiz va bizning vazifamiz – shu tilni butun dunyo bilan bo‘lishish.",
     "description2": "Biz – har bir Sevimli.fm efirini quvonchga aylantirish uchun bor kuchini sarflaydigan professionallar va ishqibozlardan iborat jamoamiz. Boshlovchilardan tortib, ovoz rejissyorlarigacha, har birimiz ishimizga jonimizni beramiz.",
-    "teamTitle": "Sevimli.fm Jamoasi"
+    "teamTitle": "<sevimli>Sevimli.fm</sevimli> Jamoasi"
+  },
+  "Management": {
+    "text": "Bizning radiostansiyamiz yurakka tegadigan ovozlar orqali odamlarni birlashtirish istagidan tug‘ilgan. Biz musiqa hammaga tushunarli til ekaniga ishonamiz va bizning vazifamiz – bu tilni dunyo bilan baham ko‘rish. Biz – Sevimli.fm'ning har bir efirini xursandchilikka aylantirish uchun hamma narsani qiladigan professionallar va ishqibozlar jamoasimiz. Boshlo‘vchilardan tortib ovoz rejissyorlarigacha, har birimiz o‘z ishimizga yurakdan mehr qo‘yamiz. Bizning radiostansiyamiz yurakka tegadigan ovozlar orqali odamlarni birlashtirish istagidan tug‘ilgan. Biz musiqa hammaga tushunarli til ekaniga ishonamiz va bizning vazifamiz – bu tilni dunyo bilan baham ko‘rish. Biz – Sevimli.fm'ning har bir efirini xursandchilikka aylantirish uchun hamma narsani qiladigan professionallar va ishqibozlar jamoasimiz. Boshlo‘vchilardan tortib ovoz rejissyorlarigacha, har birimiz o‘z ishimizga yurakdan mehr qo‘yamiz."
   }
 }

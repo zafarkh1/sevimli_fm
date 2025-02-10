@@ -44,7 +44,7 @@ const Footer = () => {
 
         <div className="relative flex lg:flex-row flex-col justify-between lg:items-center gap-3 mt-10 lg:border-b lg:border-b-[#545454] pb-4">
           <button
-            className="px-[14px] py-[13px] rounded-full bg-primary justify-center items-center hidden lg:flex"
+            className="px-[14px] py-[13px] rounded-full bg-primary hover:bg-primaryHover justify-center items-center hidden lg:flex"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             <IconArrowTop />
@@ -65,7 +65,7 @@ const Footer = () => {
             {t("write")}
           </button>
           <button
-            className="px-[14px] py-[13px] rounded-full bg-primary justify-center items-center flex absolute top-0 right-0 lg:hidden"
+            className="px-[14px] py-[13px] rounded-full bg-primary hover:bg-primaryHover justify-center items-center flex absolute top-0 right-0 lg:hidden"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             <IconArrowTop />

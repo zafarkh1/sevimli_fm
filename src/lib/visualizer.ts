@@ -13,8 +13,6 @@ export const initVisualizer = (
     return;
   }
 
-  console.log(canvasCtx);
-
   const audioCtx = new (window.AudioContext ||
     (window as any).webkitAudioContext)();
   const analyser = audioCtx.createAnalyser();

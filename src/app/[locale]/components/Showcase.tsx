@@ -1,31 +1,26 @@
 "use client";
 
 import { useState } from "react";
-import { IconMusicPause, IconMusicPlay } from "@/components/icons/icons";
+import AudioVisualizer from "@/components/AudioVisualizer";
+import PlayerFooter from "./PlayerFooter";
 
 const Showcase = () => {
-  const [isPaused, setIsPaused] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [volume, setVolume] = useState(1); // Default volume (1 = 100%)
 
   return (
-    <section className="lg:mt-36">
-      <div className="flex items-center justify-center lg:gap-16 gap-6 min-h-[calc(100vh-200px)]">
-        {isPaused ? (
-          <IconMusicPlay
-            className="lg:size-40 size-12 cursor-pointer"
-            onClick={() => setIsPaused(false)}
-          />
-        ) : (
-          <IconMusicPause
-            className="lg:size-40 size-12 cursor-pointer"
-            onClick={() => setIsPaused(true)}
-          />
-        )}
-        <img
-          src="/images/showcase.png"
-          alt="showcase"
-          className="lg:w-fit w-1/2"
-        />
-      </div>
+    <section className="lg:mt-36 flex items-center justify-center lg:gap-[150px] gap-6 min-h-[calc(100vh-200px)]">
+      <AudioVisualizer
+        isPlaying={isPlaying}
+        togglePlay={() => setIsPlaying(!isPlaying)}
+        volume={volume}
+      />
+      <PlayerFooter
+        isPlaying={isPlaying}
+        togglePlay={() => setIsPlaying(!isPlaying)}
+        volume={volume}
+        setVolume={setVolume}
+      />
     </section>
   );
 };

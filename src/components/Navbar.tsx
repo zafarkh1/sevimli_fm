@@ -35,6 +35,10 @@ const Navbar = () => {
     };
   }, [isOpen]);
 
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+
   return (
     <header
       className={`fixed lg:top-0 left-0 right-0 z-20 transition-all duration-300 ease-linear ${
@@ -44,9 +48,21 @@ const Navbar = () => {
       <div className="myContainer relative lg:pt-16 lg:pb-12 flex justify-between xl:items-center text-lg">
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center xl:gap-14 lg:gap-8">
-          <Link href={`/${currentLang}`}>{t("home")}</Link>
-          <Link href={`/${currentLang}/about`}>{t("about")}</Link>
-          <Link href={`/${currentLang}/cooperation`}>{t("management")}</Link>
+          {[
+            { href: `/${currentLang}`, label: t("home") },
+            { href: `/${currentLang}/about`, label: t("about") },
+            { href: `/${currentLang}/management`, label: t("management") },
+          ].map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className={`${
+                pathname === href ? "text-primary" : "text-white"
+              } transition-colors duration-200`}
+            >
+              {label}
+            </Link>
+          ))}
         </div>
 
         {/* Logo */}
@@ -72,8 +88,20 @@ const Navbar = () => {
 
         {/* Desktop Right Side */}
         <div className="hidden lg:flex items-center xl:gap-14 lg:gap-8">
-          <Link href={`/${currentLang}`}>{t("radio")}</Link>
-          <Link href={`/${currentLang}/contact`}>{t("contact")}</Link>
+          {[
+            { href: `/${currentLang}/radio`, label: t("radio") },
+            { href: `/${currentLang}/contact`, label: t("contact") },
+          ].map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className={`${
+                pathname === href ? "text-primary" : "text-white"
+              } transition-colors duration-200`}
+            >
+              {label}
+            </Link>
+          ))}
           <LanguageSwitcher />
         </div>
 
@@ -104,11 +132,23 @@ const Navbar = () => {
             className="lg:hidden"
           />
           <div className="flex flex-col space-y-6 mt-10">
-            <Link href={`/${currentLang}`}>{t("home")}</Link>
-            <Link href={`/${currentLang}/about`}>{t("about")}</Link>
-            <Link href={`/${currentLang}/cooperation`}>{t("management")}</Link>
-            <Link href={`/${currentLang}/radio`}>{t("radio")}</Link>
-            <Link href={`/${currentLang}/contact`}>{t("contact")}</Link>
+            {[
+              { href: `/${currentLang}`, label: t("home") },
+              { href: `/${currentLang}/about`, label: t("about") },
+              { href: `/${currentLang}/management`, label: t("management") },
+              { href: `/${currentLang}/radio`, label: t("radio") },
+              { href: `/${currentLang}/contact`, label: t("contact") },
+            ].map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                className={`${
+                  pathname === href ? "text-primary" : "text-white"
+                } transition-colors duration-200`}
+              >
+                {label}
+              </Link>
+            ))}
           </div>
           <button onClick={() => setIsOpen(false)}>
             <IconClose className="size-8 absolute top-10 right-4 cursor-pointer" />

@@ -7,7 +7,7 @@
     "contact": "Contact"
   },
   "HomeAbout": {
-    "title": "Sevimli.fm is your musical companion, created with love ❤️ for music 🎵 and inspiration. 🌌",
+    "title": "is your musical companion, created with love ❤️ for music 🎵 and inspiration. 🌌",
     "description": "Our radio station was born out of a desire to unite people through sounds that touch the heart. We believe that music is a language everyone understands, and our mission is to share this language with the world."
   },
   "BrandPromotion": {
@@ -28,7 +28,7 @@
     "email_info": "Write to us at",
     "address": "📍 Address: Tashkent, Amir Temur Avenue, 53.",
     "phone": "📞 Phone: +998 (xx) xxx-xx-xx",
-    "socials": "🌐 Socials: Instagram, Telegram, YouTube",
+    "socials": "🌐 Socials: ",
     "contact_form_title": "Contact Us",
     "contact_form_description": "You can reach out to us anytime",
     "name": "First Name",
@@ -57,9 +57,12 @@
     "copyright": "© 2025 — Sevimli.fm"
   },
   "About": {
-    "title": "Sevimli.fm is your musical companion, created with love ❤️ for music 🎵 and inspiration. 🌌",
+    "title": "is your musical companion, created with love ❤️ for music 🎵 and inspiration. 🌌",
     "description1": "Our radio station was born out of a desire to unite people through sounds that touch the heart. We believe that music is a language everyone understands, and our mission is to share this language with the world.",
     "description2": "We are a team of professionals and enthusiasts who do everything to make each Sevimli.fm broadcast bring joy. From hosts to sound engineers, each of us puts our soul into our work.",
-    "teamTitle": "Sevimli.fm Team"
+    "teamTitle": "<sevimli>Sevimli.fm</sevimli> Team"
+  },
+  "Management": {
+    "text": "Our radio station was born out of a desire to unite people through sounds that touch the heart. We believe that music is a language understood by everyone, and our mission is to share this language with the world. We are a team of professionals and enthusiasts who do everything to ensure that every broadcast on Sevimli.fm brings joy. From hosts to sound engineers, each of us puts our heart into our work. Our radio station was born out of a desire to unite people through sounds that touch the heart. We believe that music is a language understood by everyone, and our mission is to share this language with the world. We are a team of professionals and enthusiasts who do everything to ensure that every broadcast on Sevimli.fm brings joy. From hosts to sound engineers, each of us puts our heart into our work."
   }
 }
