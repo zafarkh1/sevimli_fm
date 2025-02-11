@@ -1,8 +1,45 @@
+"use client";
+
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+import { useState } from "react";
+import { useFormik } from "formik";
+import { usePathname } from "next/navigation";
+import { getContactValidationSchema } from "@/components/utils/validation";
+import { sendContactMessage } from "@/api/api";
+import toast from "react-hot-toast";
 
 const Contact = () => {
   const t = useTranslations("Contact");
+  const pathname = usePathname();
+  const currentLang = pathname.split("/")[1] || "en";
+  const [loading, setLoading] = useState(false);
+
+  // Formik Configuration
+  const formik = useFormik({
+    initialValues: {
+      first_name: "",
+      last_name: "",
+      email: "",
+      phone: "",
+      description: "",
+    },
+    validationSchema: getContactValidationSchema(),
+    onSubmit: async (values, { resetForm }) => {
+      setLoading(true);
+
+      const status = await sendContactMessage(values, currentLang);
+
+      if (status === "success") {
+        toast.success(t("success_message"));
+        resetForm();
+      } else {
+        toast.error(t("error_message"));
+      }
+
+      setLoading(false);
+    },
+  });
 
   return (
     <section className="flex lg:flex-row flex-col lg:gap-10 gap-6 lg:mb-[224px] mb-[87px]">
@@ -40,7 +77,7 @@ const Contact = () => {
               target="_blank"
               className="underline hover:text-primary transition duration-300"
             >
-              You Tube
+              YouTube
             </Link>
           </li>
         </ul>
@@ -53,30 +90,64 @@ const Contact = () => {
         <p className="font-medium lg:text-base text-sm mt-2">
           {t("contact_form_description")}
         </p>
-        <form className="mt-4 space-y-4">
+        <form onSubmit={formik.handleSubmit} className="mt-4 space-y-4">
           <input
             type="text"
             placeholder={t("name")}
-            className="bg-transparent border border-[#797979] py-[10px] px-4 rounded-full lg:w-[49%] w-full lg:mr-2"
+            className="bg-transparent border border-[#797979] py-[10px] px-4 rounded-full w-full"
+            {...formik.getFieldProps("first_name")}
           />
+          {formik.touched.first_name && formik.errors.first_name && (
+            <p className="text-red-500 text-sm">{formik.errors.first_name}</p>
+          )}
+
           <input
             type="text"
             placeholder={t("surname")}
-            className="bg-transparent border border-[#797979] py-[10px] px-4 rounded-full lg:w-[49%] w-full"
+            className="bg-transparent border border-[#797979] py-[10px] px-4 rounded-full w-full"
+            {...formik.getFieldProps("last_name")}
           />
+          {formik.touched.last_name && formik.errors.last_name && (
+            <p className="text-red-500 text-sm">{formik.errors.last_name}</p>
+          )}
+
+          <input
+            type="email"
+            placeholder={t("email")}
+            className="bg-transparent border border-[#797979] py-[10px] px-4 rounded-full w-full"
+            {...formik.getFieldProps("email")}
+          />
+          {formik.touched.email && formik.errors.email && (
+            <p className="text-red-500 text-sm">{formik.errors.email}</p>
+          )}
+
           <input
             type="text"
             placeholder={t("phone_number")}
             className="bg-transparent border border-[#797979] py-[10px] px-4 rounded-full w-full"
+            {...formik.getFieldProps("phone")}
           />
+          {formik.touched.phone && formik.errors.phone && (
+            <p className="text-red-500 text-sm">{formik.errors.phone}</p>
+          )}
+
           <textarea
             cols={10}
             rows={5}
             placeholder={t("message_placeholder")}
             className="bg-transparent border border-[#797979] py-[10px] px-4 rounded-3xl w-full resize-none"
+            {...formik.getFieldProps("description")}
           ></textarea>
-          <button className="py-[10px] font-semibold rounded-full w-full bg-primary hover:bg-primaryHover text-white mt-10 transition-all duration-300 ease-out">
-            {t("send_button")}
+          {formik.touched.description && formik.errors.description && (
+            <p className="text-red-500 text-sm">{formik.errors.description}</p>
+          )}
+
+          <button
+            type="submit"
+            disabled={loading}
+            className="py-[10px] font-semibold rounded-full w-full bg-primary hover:bg-primaryHover text-white mt-10 transition-all duration-300 ease-out"
+          >
+            {loading ? t("sending") : t("send_button")}
           </button>
         </form>
       </div>

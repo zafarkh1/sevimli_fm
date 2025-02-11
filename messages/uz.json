@@ -26,6 +26,7 @@
     "title": "Bizning musiqiy olamimizning bir qismi bo'lishni xohlaysizmi?",
     "description": "Biz yangi g‘oyalar, hamkorlik va qiziqarli loyihalar uchun ochiqmiz!",
     "email_info": "Bizga yozing:",
+    "email": "Email",
     "address": "📍 Manzil: Toshkent, Amir Temur shoh ko'chasi, 53.",
     "phone": "📞 Telefon: +998 (xx) xxx-xx-xx",
     "socials": "🌐 Ijtimoiy tarmoqlar:",
@@ -35,7 +36,25 @@
     "surname": "Familiya",
     "phone_number": "Telefon raqami",
     "message_placeholder": "Biz qanday yordam bera olamiz?",
-    "send_button": "Yuborish"
+    "send_button": "Yuborish",
+    "sending": "Yuborilmoqda...",
+    "success_message": "Xabaringiz muvaffaqiyatli yuborildi!",
+    "error_message": "Xatolik yuz berdi. Iltimos, qayta urinib ko‘ring.",
+
+    "errors": {
+      "name_short": "Ism kamida 2 ta belgi bo‘lishi kerak.",
+      "name_long": "Ism 50 ta belgidan oshmasligi kerak.",
+      "name_required": "Ism majburiy.",
+      "surname_short": "Familiya kamida 2 ta belgi bo‘lishi kerak.",
+      "surname_long": "Familiya 50 ta belgidan oshmasligi kerak.",
+      "surname_required": "Familiya majburiy.",
+      "invalid_email": "Noto‘g‘ri elektron pochta formati.",
+      "email_required": "Elektron pochta majburiy.",
+      "invalid_phone": "Noto‘g‘ri telefon raqami formati.",
+      "phone_required": "Telefon raqami majburiy.",
+      "message_short": "Xabar kamida 10 ta belgi bo‘lishi kerak.",
+      "message_required": "Xabar majburiy."
+    }
   },
   "Footer": {
     "home": "Bosh sahifa",

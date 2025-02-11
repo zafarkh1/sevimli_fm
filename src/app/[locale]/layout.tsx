@@ -2,10 +2,13 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Raleway } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "./styles/globals.css";
+import { AudioPlayerProvider, useAudioPlayer } from "@/context/AudioContext";
+import GlobalAudioPlayer from "@/context/GlobalAudioPlayer";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -32,9 +35,13 @@ export default async function RootLayout({
     <html lang={locale}>
       <body className={`${raleway.variable} antialiased`}>
         <NextIntlClientProvider messages={messages} timeZone="Asia/Tashkent">
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
+          <AudioPlayerProvider>
+            <Navbar />
+            {children}
+            <Footer />
+            <Toaster position="top-center" reverseOrder={false} />
+            <GlobalAudioPlayer />
+          </AudioPlayerProvider>
         </NextIntlClientProvider>
       </body>
     </html>
